@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-night-950 text-white font-sans antialiased; }
+::selection { background: #d4a84a; color: #07051a; }
+
+@layer components {
+  .gold-text {
+    background: linear-gradient(90deg, #b88a2e, #f3dc9a, #d4a84a, #f3dc9a, #b88a2e);
+    background-size: 200% auto;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    @apply animate-shimmer;
+  }
+  .glass { @apply bg-white/[0.04] backdrop-blur-xl border border-white/10; }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-night-950 transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_35px_rgba(232,196,106,0.45)];
+    background: linear-gradient(135deg, #f3dc9a, #d4a84a 55%, #b88a2e);
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-white border border-white/25 transition-all duration-300 hover:bg-white/10 hover:border-gold-400/60;
+  }
+  .eyebrow { @apply text-xs uppercase tracking-[0.35em] text-gold-400; }
+}
+
