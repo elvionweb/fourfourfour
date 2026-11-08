@@ -7,7 +7,7 @@ import {
 import { FaWhatsapp } from 'react-icons/fa'
 
 /* ---------- CONFIG ---------- */
-const WHATSAPP = '+447871259314'
+const WHATSAPP = '+447599819094'
 // Pound per 1 US dollar. Update this number whenever you want to change Pound prices (≈ £0.76 on 8 Oct 2026).
 const GBP_RATE = 0.76
 const CurrencyCtx = createContext({ cur: 'USD', setCur: () => { } })
@@ -338,42 +338,7 @@ function Nav() {
     </header>
   )
 }
-// function Nav() {
-//   const [open, setOpen] = useState(false)
-//   const [solid, setSolid] = useState(false)
-//   useEffect(() => {
-//     const f = () => setSolid(window.scrollY > 40)
-//     f(); window.addEventListener('scroll', f); return () => window.removeEventListener('scroll', f)
-//   }, [])
-//   const { cur } = useCurrency()
-//   const links = [['About', '#about'], ['Services', '#services'], ['Talismans', '#shop'], ['Mentorship', '#mentorship'], ['Reviews', '#reviews'], ['How it works', '#how']]
-//   return (
-//     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${solid ? 'glass border-x-0 border-t-0 bg-night-950/70' : ''}`}>
-//       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
 
-//         <a href="#top" className="flex items-center gap-2">
-//   <img src="/logo-mark.svg" alt="444 spirituality logo" className="h-12 w-12" />
-//   <span className="font-display text-xl tracking-wide">444 <span className="text-gold-400">Spirituality</span></span>
-// </a>
-//         <nav className="hidden items-center gap-8 md:flex">
-//           {links.map(([l, h]) => <a key={l} href={h} className="text-sm text-white/70 transition hover:text-gold-300">{l}</a>)}
-//           <a href={wa('Hello 444 spirituality, I would like to book a reading.')} target="_blank" rel="noreferrer" className="btn-gold !py-2.5">Book a Reading</a>
-//         </nav>
-//         <button className="md:hidden" onClick={() => setOpen(!open)} aria-label="Menu">{open ? <X /> : <Menu />}</button>
-//       </div>
-//       <AnimatePresence>
-//         {open && (
-//           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="glass overflow-hidden border-x-0 md:hidden">
-//             <div className="flex flex-col gap-4 px-5 py-6">
-//               {links.map(([l, h]) => <a key={l} href={h} onClick={() => setOpen(false)} className="text-lg text-white/80">{l}</a>)}
-//               <a href={wa('Hello 444 spirituality, I would like to book a reading.')} target="_blank" rel="noreferrer" className="btn-gold">Book a Reading · {money(44, cur)}</a>
-//             </div>
-//           </motion.div>
-//         )}
-//       </AnimatePresence>
-//     </header>
-//   )
-// }
 
 /* ---------- HERO ---------- */
 function Hero() {
